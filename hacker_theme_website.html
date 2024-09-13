@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Decrypting Hidden Emotions</title>
+    <style>
+        body {
+            background-color: #1c1b29;
+            font-family: 'Courier New', monospace;
+            color: #b19cd9;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .terminal {
+            padding: 20px;
+            font-size: 1.2rem;
+        }
+        .typing-effect {
+            width: 100%;
+            border-right: 2px solid #b19cd9;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #b19cd9; }
+        }
+        .reveal-button {
+            background-color: #b19cd9;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+        .reveal-message {
+            display: none;
+            margin-top: 20px;
+        }
+        .final-message {
+            margin-top: 40px;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <p class="typing-effect">> Accessing hidden data... <br> > Data found: Feelings for the past 2 years...</p>
+        <p class="typing-effect">> Decrypting...</p>
+        <p class="typing-effect">> I saw you for the first time two years ago. <br> > I come to college daily just to see you...</p>
+        <button class="reveal-button" onclick="revealMessage()">Run body_scan.exe</button>
+        <p class="reveal-message">Status: Chubby 😅, but I love myself.</p>
+    </div>
+
+    <div class="final-message">
+        <p>Today, I’m taking the risk to let you know this 💜</p>
+    </div>
+
+    <script>
+        function revealMessage() {
+            document.querySelector('.reveal-message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
